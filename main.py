@@ -11,7 +11,6 @@ data = main_request()
 
 # Stuff
 native = data['names']['native']
-synomyms = data['names']['synonyms']
 description = data['description']
 anilist = data['websites']['aniList']
 
@@ -19,7 +18,7 @@ parserDesc = bs4.BeautifulSoup(description, "html.parser")
 outputDescription = parserDesc.get_text()
 
 # Output
-print('Title: ' + native + " " + str(synomyms))
+print('Title: ' + native)
 
 print('Description \n' + outputDescription)
 
